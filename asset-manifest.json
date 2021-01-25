@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mywebsite/static/css/main.81b28fb8.chunk.css",
-    "main.js": "/mywebsite/static/js/main.391101c5.chunk.js",
-    "main.js.map": "/mywebsite/static/js/main.391101c5.chunk.js.map",
+    "main.js": "/mywebsite/static/js/main.4cb25a7d.chunk.js",
+    "main.js.map": "/mywebsite/static/js/main.4cb25a7d.chunk.js.map",
     "runtime-main.js": "/mywebsite/static/js/runtime-main.cbf042dc.js",
     "runtime-main.js.map": "/mywebsite/static/js/runtime-main.cbf042dc.js.map",
     "static/js/2.7f8f948d.chunk.js": "/mywebsite/static/js/2.7f8f948d.chunk.js",
@@ -12,31 +12,26 @@
     "index.html": "/mywebsite/index.html",
     "static/css/main.81b28fb8.chunk.css.map": "/mywebsite/static/css/main.81b28fb8.chunk.css.map",
     "static/js/2.7f8f948d.chunk.js.LICENSE.txt": "/mywebsite/static/js/2.7f8f948d.chunk.js.LICENSE.txt",
-    "static/media/avo.afa2d8da.png": "/mywebsite/static/media/avo.afa2d8da.png",
-    "static/media/birth.fe86f71f.PNG": "/mywebsite/static/media/birth.fe86f71f.PNG",
-    "static/media/checklist.585e6fa9.png": "/mywebsite/static/media/checklist.585e6fa9.png",
-    "static/media/design.3d3a7ca8.png": "/mywebsite/static/media/design.3d3a7ca8.png",
-    "static/media/divaz.3676eee6.PNG": "/mywebsite/static/media/divaz.3676eee6.PNG",
-    "static/media/emi.b0029c23.PNG": "/mywebsite/static/media/emi.b0029c23.PNG",
-    "static/media/moto.227d88b5.jpg": "/mywebsite/static/media/moto.227d88b5.jpg",
-    "static/media/newsccn.326b06e6.PNG": "/mywebsite/static/media/newsccn.326b06e6.PNG",
-    "static/media/nexnews.4fabf5f4.PNG": "/mywebsite/static/media/nexnews.4fabf5f4.PNG",
-    "static/media/pam.ae33caf3.PNG": "/mywebsite/static/media/pam.ae33caf3.PNG",
-    "static/media/real.8f9603a6.PNG": "/mywebsite/static/media/real.8f9603a6.PNG",
-    "static/media/swiggy.7e926027.jfif": "/mywebsite/static/media/swiggy.7e926027.jfif",
-    "static/media/tbm.a26de235.PNG": "/mywebsite/static/media/tbm.a26de235.PNG",
-    "static/media/test.9fee24f8.png": "/mywebsite/static/media/test.9fee24f8.png",
-    "static/media/todo.e2bd8cb0.PNG": "/mywebsite/static/media/todo.e2bd8cb0.PNG",
+    "static/media/birth.26fca294.PNG": "/mywebsite/static/media/birth.26fca294.PNG",
+    "static/media/divaz.bdd1c33e.PNG": "/mywebsite/static/media/divaz.bdd1c33e.PNG",
+    "static/media/emi.321c0d60.PNG": "/mywebsite/static/media/emi.321c0d60.PNG",
+    "static/media/moto.8372a2a0.jpg": "/mywebsite/static/media/moto.8372a2a0.jpg",
+    "static/media/newsccn.1753fd46.PNG": "/mywebsite/static/media/newsccn.1753fd46.PNG",
+    "static/media/nexnews.f66fc593.PNG": "/mywebsite/static/media/nexnews.f66fc593.PNG",
+    "static/media/pam.e6061ffc.PNG": "/mywebsite/static/media/pam.e6061ffc.PNG",
+    "static/media/real.a95d351a.PNG": "/mywebsite/static/media/real.a95d351a.PNG",
+    "static/media/swiggy.7d2401b9.jfif": "/mywebsite/static/media/swiggy.7d2401b9.jfif",
+    "static/media/tbm.cf6d6cd1.PNG": "/mywebsite/static/media/tbm.cf6d6cd1.PNG",
+    "static/media/todo.c9d139c4.PNG": "/mywebsite/static/media/todo.c9d139c4.PNG",
     "static/media/unnamed.aff1ad4e.jpg": "/mywebsite/static/media/unnamed.aff1ad4e.jpg",
-    "static/media/web-design.f721d630.png": "/mywebsite/static/media/web-design.f721d630.png",
-    "static/media/web.c85b5a01.png": "/mywebsite/static/media/web.c85b5a01.png",
-    "static/media/wordpress.1409ad5b.png": "/mywebsite/static/media/wordpress.1409ad5b.png",
-    "static/media/xargs.eac68cb7.PNG": "/mywebsite/static/media/xargs.eac68cb7.PNG"
+    "static/media/web.98409f0b.png": "/mywebsite/static/media/web.98409f0b.png",
+    "static/media/wordpress.a70fee1e.png": "/mywebsite/static/media/wordpress.a70fee1e.png",
+    "static/media/xargs.69d9f228.PNG": "/mywebsite/static/media/xargs.69d9f228.PNG"
   },
   "entrypoints": [
     "static/js/runtime-main.cbf042dc.js",
     "static/js/2.7f8f948d.chunk.js",
     "static/css/main.81b28fb8.chunk.css",
-    "static/js/main.391101c5.chunk.js"
+    "static/js/main.4cb25a7d.chunk.js"
   ]
 }
