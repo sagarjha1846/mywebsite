@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81b28fb8.chunk.css",
+    "main.js": "/static/js/main.391101c5.chunk.js",
+    "main.js.map": "/static/js/main.391101c5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9d5d1593.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9d5d1593.js.map",
+    "static/js/2.7f8f948d.chunk.js": "/static/js/2.7f8f948d.chunk.js",
+    "static/js/2.7f8f948d.chunk.js.map": "/static/js/2.7f8f948d.chunk.js.map",
+    "static/js/3.3a534b1a.chunk.js": "/static/js/3.3a534b1a.chunk.js",
+    "static/js/3.3a534b1a.chunk.js.map": "/static/js/3.3a534b1a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.81b28fb8.chunk.css.map": "/static/css/main.81b28fb8.chunk.css.map",
+    "static/js/2.7f8f948d.chunk.js.LICENSE.txt": "/static/js/2.7f8f948d.chunk.js.LICENSE.txt",
+    "static/media/avo.afa2d8da.png": "/static/media/avo.afa2d8da.png",
+    "static/media/birth.fe86f71f.PNG": "/static/media/birth.fe86f71f.PNG",
+    "static/media/checklist.585e6fa9.png": "/static/media/checklist.585e6fa9.png",
+    "static/media/design.3d3a7ca8.png": "/static/media/design.3d3a7ca8.png",
+    "static/media/divaz.3676eee6.PNG": "/static/media/divaz.3676eee6.PNG",
+    "static/media/emi.b0029c23.PNG": "/static/media/emi.b0029c23.PNG",
+    "static/media/moto.227d88b5.jpg": "/static/media/moto.227d88b5.jpg",
+    "static/media/newsccn.326b06e6.PNG": "/static/media/newsccn.326b06e6.PNG",
+    "static/media/nexnews.4fabf5f4.PNG": "/static/media/nexnews.4fabf5f4.PNG",
+    "static/media/pam.ae33caf3.PNG": "/static/media/pam.ae33caf3.PNG",
+    "static/media/real.8f9603a6.PNG": "/static/media/real.8f9603a6.PNG",
+    "static/media/swiggy.7e926027.jfif": "/static/media/swiggy.7e926027.jfif",
+    "static/media/tbm.a26de235.PNG": "/static/media/tbm.a26de235.PNG",
+    "static/media/test.9fee24f8.png": "/static/media/test.9fee24f8.png",
+    "static/media/todo.e2bd8cb0.PNG": "/static/media/todo.e2bd8cb0.PNG",
+    "static/media/unnamed.aff1ad4e.jpg": "/static/media/unnamed.aff1ad4e.jpg",
+    "static/media/web-design.f721d630.png": "/static/media/web-design.f721d630.png",
+    "static/media/web.c85b5a01.png": "/static/media/web.c85b5a01.png",
+    "static/media/wordpress.1409ad5b.png": "/static/media/wordpress.1409ad5b.png",
+    "static/media/xargs.eac68cb7.PNG": "/static/media/xargs.eac68cb7.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d5d1593.js",
+    "static/js/2.7f8f948d.chunk.js",
+    "static/css/main.81b28fb8.chunk.css",
+    "static/js/main.391101c5.chunk.js"
+  ]
+}
