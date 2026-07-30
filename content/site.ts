@@ -17,9 +17,12 @@ export const site = {
   url: "https://sagarjha.dev", // TODO: confirm domain
   ogImage: "/opengraph-image",
 
-  /** Used verbatim in <meta name="description"> and as the OG description. */
+  /**
+   * Used verbatim in <meta name="description"> and as the OG description.
+   * Kept under ~155 characters so Google doesn't truncate the snippet.
+   */
   description:
-    "Full-stack engineer with six years building production backends and web apps on TypeScript, Node.js and PostgreSQL. The authentication, RBAC, approval and audit systems I built from scratch now run under 15+ production products.",
+    "Full-stack engineer, six years in. Built the authentication, RBAC, approval and audit systems now running under 15+ production products.",
 
   email: "sagar.jharavi@gmail.com",
   phone: "+91 88503 38145",
