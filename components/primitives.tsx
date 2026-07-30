@@ -87,39 +87,9 @@ export function SectionHeader({
   );
 }
 
-/** Wraps children so each gets a staggered reveal delay. */
-export function Stagger({
-  children,
-  className = "",
-  from = 0,
-}: {
-  children: ReactNode[];
-  className?: string;
-  from?: number;
-}) {
-  return (
-    <div className={className}>
-      {children.map((child, i) => (
-        <div
-          key={i}
-          data-reveal
-          style={{ ["--reveal-index" as string]: from + i }}
-          className="contents"
-        >
-          {child}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 /* -------------------------------------------------------------------------- */
 /* Text                                                                       */
 /* -------------------------------------------------------------------------- */
-
-export function Eyebrow({ children }: { children: ReactNode }) {
-  return <p className="eyebrow">{children}</p>;
-}
 
 /** Small metadata chip. Not a skill badge — no rating, no colour coding. */
 export function Tag({ children }: { children: ReactNode }) {
