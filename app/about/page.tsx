@@ -31,11 +31,31 @@ export const metadata: Metadata = {
   },
 };
 
+function StructuredData() {
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${site.url}/about`,
+    url: `${site.url}/about`,
+    name: title,
+    description,
+    mainEntity: { "@id": `${site.url}/#person` },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
+
 export default function AboutPage() {
   const current = experience[0];
 
   return (
     <>
+      <StructuredData />
       <Section divider={false} className="pt-16 pb-4 sm:pt-24">
         <Container>
           <p className="eyebrow" data-reveal>

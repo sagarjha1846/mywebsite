@@ -26,11 +26,45 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * CollectionPage + ItemList JSON-LD so search engines can index this as a
+ * structured set of case studies rather than an undifferentiated page of
+ * text — each item points at the case study's own CreativeWork record.
+ */
+function StructuredData() {
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${site.url}/work`,
+    url: `${site.url}/work`,
+    name: title,
+    description,
+    about: { "@id": `${site.url}/#person` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: projects.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${site.url}/work/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
+
 export default function WorkPage() {
   const rest = projects.filter((p) => !p.featured);
 
   return (
     <>
+      <StructuredData />
       <Section divider={false} className="pt-16 pb-4 sm:pt-24">
         <Container>
           <p className="eyebrow" data-reveal>
