@@ -10,11 +10,25 @@ import {
   Section,
 } from "@/components/primitives";
 
+const title = "About";
+const description =
+  "Sagar Jha — full-stack engineer in Mumbai working on authorisation, approvals, audit trails and identity. Six years building systems other features depend on being correct.";
+
 export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Sagar Jha — full-stack engineer in Mumbai working on authorisation, approvals, audit trails and identity. Six years building systems other features depend on being correct.",
+  title,
+  description,
   alternates: { canonical: "/about" },
+  openGraph: {
+    type: "profile",
+    title: `${title} — ${site.name}`,
+    description,
+    url: `${site.url}/about`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${title} — ${site.name}`,
+    description,
+  },
 };
 
 export default function AboutPage() {

@@ -4,11 +4,25 @@ import { site } from "@/content/site";
 import { articles, writingTopics } from "@/content/writing";
 import { ArrowLink, Container, Section } from "@/components/primitives";
 
+const title = "Writing";
+const description =
+  "Technical writing on authorisation, permission modelling, event-driven architecture, idempotency and LLM agent design.";
+
 export const metadata: Metadata = {
-  title: "Writing",
-  description:
-    "Technical writing on authorisation, permission modelling, event-driven architecture, idempotency and LLM agent design.",
+  title,
+  description,
   alternates: { canonical: "/writing" },
+  openGraph: {
+    type: "website",
+    title: `${title} — ${site.name}`,
+    description,
+    url: `${site.url}/writing`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${title} — ${site.name}`,
+    description,
+  },
 };
 
 export default function WritingPage() {

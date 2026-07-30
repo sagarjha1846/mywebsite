@@ -1,14 +1,29 @@
 import type { Metadata } from "next";
 
+import { site } from "@/content/site";
 import { projects, featuredProjects } from "@/content/projects";
 import { Container, Section } from "@/components/primitives";
 import { ProjectCard, ProjectRow } from "@/components/project-card";
 
+const title = "Work";
+const description =
+  "Case studies on platform services, authentication, LLM agents, PostgreSQL schema design, microfrontends and open-source systems — the problem, the architecture, the decisions and the trade-offs.";
+
 export const metadata: Metadata = {
-  title: "Work",
-  description:
-    "Case studies on platform services, authentication, LLM agents, PostgreSQL schema design, microfrontends and open-source systems — the problem, the architecture, the decisions and the trade-offs.",
+  title,
+  description,
   alternates: { canonical: "/work" },
+  openGraph: {
+    type: "website",
+    title: `${title} — ${site.name}`,
+    description,
+    url: `${site.url}/work`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${title} — ${site.name}`,
+    description,
+  },
 };
 
 export default function WorkPage() {
