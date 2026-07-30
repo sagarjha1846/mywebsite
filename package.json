@@ -1,7 +1,20 @@
 {
   "name": "sagarjha-portfolio",
   "version": "1.0.0",
+  "description": "Sagar Jha's portfolio — Next.js, TypeScript, Tailwind v4.",
   "private": true,
+  "author": {
+    "name": "Sagar Jha",
+    "email": "sagar.jharavi@gmail.com",
+    "url": "https://github.com/sagarjha1846"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sagarjha1846/mywebsite.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -101,6 +101,49 @@ function Points({ items }: { items: string[] }) {
 
 /* -------------------------------------------------------------------------- */
 
+/**
+ * BreadcrumbList + CreativeWork JSON-LD. The `about` array is what lets a
+ * search engine associate this specific write-up with the technologies it
+ * covers, which is the difference between a generic "article" result and one
+ * that can surface for "RBAC case study" or "outbox pattern example".
+ */
+function StructuredData({ project }: { project: (typeof projects)[number] }) {
+  const url = `${site.url}/work/${project.slug}`;
+  const json = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Work", item: `${site.url}/work` },
+          { "@type": "ListItem", position: 2, name: project.title, item: url },
+        ],
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": url,
+        url,
+        name: project.title,
+        headline: project.title,
+        description: project.kicker,
+        author: { "@id": `${site.url}/#person` },
+        creator: { "@id": `${site.url}/#person` },
+        keywords: project.stack.join(", "),
+        about: project.stack,
+        isAccessibleForFree: true,
+        ...(project.links?.[0] ? { sameAs: project.links.map((l) => l.href) } : {}),
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
+
 export default async function CaseStudyPage({
   params,
 }: {
@@ -116,6 +159,7 @@ export default async function CaseStudyPage({
 
   return (
     <article>
+      <StructuredData project={project} />
       {/* ---------------------------------------------------------------- */}
       <header className="pt-12 pb-4 sm:pt-16">
         <Container>

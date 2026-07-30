@@ -151,8 +151,11 @@ export function ButtonLink({
   className = "",
   ariaLabel,
 }: ButtonProps) {
+  // `transition` (not `transition-all`) deliberately excludes outline — a
+  // keyboard focus ring must snap in instantly, not fade in over 200ms with
+  // the hover color change.
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-(length:--text-sm) font-medium transition-all duration-200 ease-[var(--ease-out-soft)] active:scale-[0.98]";
+    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-(length:--text-sm) font-medium transition duration-200 ease-[var(--ease-out-soft)] active:scale-[0.98]";
 
   const variants = {
     primary:
