@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { withBasePath } from "@/lib/paths";
+
 /* -------------------------------------------------------------------------- */
 /* Layout                                                                     */
 /* -------------------------------------------------------------------------- */
@@ -137,10 +139,20 @@ export function ButtonLink({
 
   const cls = `${base} ${variants[variant]} ${className}`;
 
+  // "external" hrefs (opens in a new tab) always render as a plain <a>,
+  // never next/link. For a same-origin file (the résumé PDF) Link would
+  // treat it as a page and prefetch its (nonexistent) RSC segment, 404ing
+  // harmlessly but noisily — even with prefetch={false}, which doesn't
+  // suppress it for target="_blank" hrefs. A plain <a> sidesteps that
+  // entirely; withBasePath() does manually what Link would have done
+  // automatically, since a bare "/foo" would 404 under GitHub Pages'
+  // project-page basePath otherwise. Truly cross-origin hrefs (github.com,
+  // mailto:) pass through withBasePath() unprefixed — it only touches
+  // root-relative paths.
   if (external) {
     return (
       <a
-        href={href}
+        href={href.startsWith("/") ? withBasePath(href) : href}
         target="_blank"
         rel="noopener noreferrer"
         className={cls}
@@ -194,13 +206,21 @@ export function ArrowLink({
     </>
   );
 
+  // See the comment in ButtonLink for why "external" renders a plain <a>
+  // with a manual withBasePath() prefix rather than next/link.
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+      <a
+        href={href.startsWith("/") ? withBasePath(href) : href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cls}
+      >
         {inner}
       </a>
     );
   }
+
   return (
     <Link href={href} className={cls}>
       {inner}

@@ -1,9 +1,22 @@
 /**
  * Single source of truth for identity, links and SEO defaults.
  *
- * NOTE — `url` is a placeholder domain. Replace it before deploying; it is
- * used for canonical URLs, OG tags, sitemap.xml, robots.txt and RSS.
+ * `url` vs `origin`: deployed as a GitHub Pages *project* site, so every
+ * real page lives under /mywebsite. `url` is the full deployed base
+ * (origin + basePath) — use it for every page-path construction
+ * (`${site.url}/work`, canonical URLs, OG images, sitemap, RSS). `origin`
+ * is the bare domain, for the rare case that genuinely wants just that
+ * (robots.txt's non-standard Host directive).
+ *
+ * IMPORTANT: `url` must always be built as an *absolute* string
+ * (`${site.url}${path}`), never passed as a bare "/path" to Next's
+ * Metadata API (alternates.canonical, icons, openGraph.images, etc). Next
+ * resolves those against `metadataBase` using standard URL-resolution
+ * rules, where a leading "/" resets to the domain root and silently
+ * drops the "/mywebsite" prefix — verified empirically, not a guess.
  */
+
+const origin = "https://sagarjha1846.github.io";
 
 export const site = {
   name: "Sagar Jha",
@@ -14,7 +27,8 @@ export const site = {
   location: "Mumbai, India",
   timezone: "Asia/Kolkata",
 
-  url: "https://sagarjha1846.github.io",
+  origin,
+  url: `${origin}/mywebsite`,
 
   /**
    * Used verbatim in <meta name="description"> and as the OG description.

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { site } from "@/content/site";
+import { withBasePath } from "@/lib/paths";
 
 const social = [
   { label: "GitHub", href: site.links.github },
@@ -64,8 +65,14 @@ export function Footer() {
               <p className="eyebrow">Feed</p>
               <ul className="mt-4 space-y-2.5">
                 <li>
+                  {/* Plain <a>, not next/link — rss.xml is a static file, not
+                      a page route. Link would prefetch it as if it were one
+                      and 404 harmlessly-but-noisily on the nonexistent RSC
+                      tree (confirmed with the résumé link; prefetch={false}
+                      doesn't suppress it). withBasePath() does manually what
+                      Link would have applied automatically. */}
                   <a
-                    href="/rss.xml"
+                    href={withBasePath("/rss.xml")}
                     className="text-(length:--text-sm) text-ink-secondary transition-colors hover:text-ink"
                   >
                     RSS

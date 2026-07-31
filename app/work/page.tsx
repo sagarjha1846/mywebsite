@@ -12,19 +12,20 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/work" },
+  // Absolute — see the comment on `canonical` in app/layout.tsx.
+  alternates: { canonical: `${site.url}/work` },
   openGraph: {
     type: "website",
     title: `${title} — ${site.name}`,
     description,
     url: `${site.url}/work`,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    images: [{ url: `${site.url}/opengraph-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${title} — ${site.name}`,
     description,
-    images: ["/opengraph-image.png"],
+    images: [`${site.url}/opengraph-image.png`],
   },
 };
 

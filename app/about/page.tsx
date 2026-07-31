@@ -17,19 +17,19 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/about" },
+  alternates: { canonical: `${site.url}/about` },
   openGraph: {
     type: "profile",
     title: `${title} — ${site.name}`,
     description,
     url: `${site.url}/about`,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    images: [{ url: `${site.url}/opengraph-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${title} — ${site.name}`,
     description,
-    images: ["/opengraph-image.png"],
+    images: [`${site.url}/opengraph-image.png`],
   },
 };
 

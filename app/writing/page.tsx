@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { site } from "@/content/site";
 import { articles, writingTopics } from "@/content/writing";
@@ -11,19 +12,19 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/writing" },
+  alternates: { canonical: `${site.url}/writing` },
   openGraph: {
     type: "website",
     title: `${title} — ${site.name}`,
     description,
     url: `${site.url}/writing`,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    images: [{ url: `${site.url}/opengraph-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${title} — ${site.name}`,
     description,
-    images: ["/opengraph-image.png"],
+    images: [`${site.url}/opengraph-image.png`],
   },
 };
 
@@ -134,9 +135,9 @@ export default function WritingPage() {
                 ) : (
                   <p className="text-(length:--text-sm) text-ink-muted">
                     In the meantime, the case studies in{" "}
-                    <a href="/work" className="link">
+                    <Link href="/work" className="link">
                       Work
-                    </a>{" "}
+                    </Link>{" "}
                     cover most of these ideas with the specifics attached.
                   </p>
                 )}

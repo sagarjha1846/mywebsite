@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     site.name,
   ],
   alternates: {
-    canonical: "/",
+    // Absolute, deliberately — not "/". Next resolves a leading-slash
+    // relative path against metadataBase using standard URL rules, which
+    // reset to the domain root and silently drop the "/mywebsite" basePath.
+    // Verified empirically; see the comment in content/site.ts.
+    canonical: site.url,
     types: { "application/rss+xml": `${site.url}/rss.xml` },
   },
   // Static PNGs in /public rather than Next's dynamic icon/opengraph-image
@@ -44,9 +48,10 @@ export const metadata: Metadata = {
   // which GitHub Pages (and most static hosts) serve as
   // application/octet-stream, breaking favicon rendering and social-card
   // scrapers outright. Regenerate via `npx tsx scripts/generate-images.tsx`.
+  // Absolute URLs here too, for the same basePath reason as canonical above.
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: `${site.url}/icon.png`,
+    apple: `${site.url}/apple-icon.png`,
   },
   openGraph: {
     type: "website",
@@ -55,13 +60,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
     description: site.description,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    images: [{ url: `${site.url}/opengraph-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.role}`,
     description: site.description,
-    images: ["/opengraph-image.png"],
+    images: [`${site.url}/opengraph-image.png`],
   },
   robots: {
     index: true,

@@ -25,12 +25,12 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
-  const image = { url: `/og/${project.slug}.png`, width: 1200, height: 630 };
+  const image = { url: `${site.url}/og/${project.slug}.png`, width: 1200, height: 630 };
 
   return {
     title: project.title,
     description: project.kicker,
-    alternates: { canonical: `/work/${project.slug}` },
+    alternates: { canonical: `${site.url}/work/${project.slug}` },
     openGraph: {
       type: "article",
       title: `${project.title} — ${site.name}`,
