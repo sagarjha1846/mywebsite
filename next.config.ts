@@ -1,27 +1,18 @@
 import type { NextConfig } from "next";
 
+/**
+ * Static export for GitHub Pages — there's no Node.js server to run this on,
+ * so the whole app has to prerender to plain files. This also means
+ * next.config.ts can't use headers()/redirects()/rewrites() (no server to
+ * apply them); GitHub Pages doesn't support custom response headers anyway,
+ * so that's not a loss specific to this host.
+ */
 const nextConfig: NextConfig = {
+  output: "export",
   reactStrictMode: true,
   poweredByHeader: false,
-  compress: true,
   images: {
-    formats: ["image/avif", "image/webp"],
-  },
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "X-DNS-Prefetch-Control", value: "on" },
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
-          },
-        ],
-      },
-    ];
+    unoptimized: true,
   },
 };
 

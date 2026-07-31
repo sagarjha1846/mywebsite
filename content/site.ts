@@ -14,8 +14,7 @@ export const site = {
   location: "Mumbai, India",
   timezone: "Asia/Kolkata",
 
-  url: "https://sagarjha.dev", // TODO: confirm domain
-  ogImage: "/opengraph-image",
+  url: "https://sagarjha1846.github.io",
 
   /**
    * Used verbatim in <meta name="description"> and as the OG description.

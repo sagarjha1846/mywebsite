@@ -25,6 +25,8 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
+  const image = { url: `/og/${project.slug}.png`, width: 1200, height: 630 };
+
   return {
     title: project.title,
     description: project.kicker,
@@ -34,11 +36,13 @@ export async function generateMetadata({
       title: `${project.title} — ${site.name}`,
       description: project.kicker,
       url: `${site.url}/work/${project.slug}`,
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: `${project.title} — ${site.name}`,
       description: project.kicker,
+      images: [image.url],
     },
   };
 }

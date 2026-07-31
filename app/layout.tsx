@@ -39,6 +39,15 @@ export const metadata: Metadata = {
     canonical: "/",
     types: { "application/rss+xml": `${site.url}/rss.xml` },
   },
+  // Static PNGs in /public rather than Next's dynamic icon/opengraph-image
+  // file-convention routes — those are served without a file extension,
+  // which GitHub Pages (and most static hosts) serve as
+  // application/octet-stream, breaking favicon rendering and social-card
+  // scrapers outright. Regenerate via `npx tsx scripts/generate-images.tsx`.
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -46,11 +55,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
     description: site.description,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.role}`,
     description: site.description,
+    images: ["/opengraph-image.png"],
   },
   robots: {
     index: true,
