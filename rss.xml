@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sagar Jha — Full-Stack Engineer</title>
+    <link>https://sagarjha1846.github.io/mywebsite</link>
+    <description>Full-stack engineer, six years in. Built the authentication, RBAC, approval and audit systems now running under 15+ production products.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 31 Jul 2026 05:36:07 GMT</lastBuildDate>
+    <atom:link href="https://sagarjha1846.github.io/mywebsite/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>v1 of an LLM agent — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/llm-agent-v1</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/llm-agent-v1</guid>
+      <description>Designed and shipped the first version of an agent for enterprise automation — orchestration, tool and workflow execution, prompt and context management — and wrote the PRDs behind it.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>rbac-system — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/rbac-system</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/rbac-system</guid>
+      <description>An open-source RBAC service with data-level scoping, an append-only audit log, role-explosion clustering, and an AI assistant that provisions access through governed, human-approved workflows.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Legal document lifecycle — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/document-lifecycle-service</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/document-lifecycle-service</guid>
+      <description>A 15+ table PostgreSQL schema with a JSONB state-machine trigger, an outbox for reliable cross-service events, and a transaction-safe distributed audit trail.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ShopStop — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/shopstop</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/shopstop</guid>
+      <description>A trust-first peer-to-peer marketplace: a NestJS modular monolith and Next.js web app, shipped with an 18-part design package from PRD through VAPT checklist and cost model.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Off Cognito, onto our own auth — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/custom-auth-layer</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/custom-auth-layer</guid>
+      <description>Replaced a vendor-locked identity provider with a custom authentication and authorisation layer, then rolled SSO to 5+ products and cleared VAPT.</description>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Distributed notification system — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/notification-system</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/notification-system</guid>
+      <description>A RabbitMQ and Node.js service for real-time notifications across web and mobile, cutting duplicate notifications by 40% through idempotent message handling.</description>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The platform layer — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/platform-services</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/platform-services</guid>
+      <description>RBAC, multi-stage approvals and event-driven notifications, built once and now running under 15+ production products.</description>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Microfrontends, and the CRA exit — case study</title>
+      <link>https://sagarjha1846.github.io/mywebsite/work/microfrontends-and-vite</link>
+      <guid isPermaLink="false">https://sagarjha1846.github.io/mywebsite/work/microfrontends-and-vite</guid>
+      <description>Customer-facing products as React microfrontends with Module Federation, plus three products migrated off deprecated Create React App to Vite — roughly 4,000+ files each — with no feature regressions.</description>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://sagarjha1846.github.io
+Sitemap: https://sagarjha1846.github.io/mywebsite/sitemap.xml
